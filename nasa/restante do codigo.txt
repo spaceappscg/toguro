@@ -1,0 +1,16 @@
+foreach($decoded_results['data'] as $item){
+            $thumb = $item['images']['low_resolution']['url'];
+            $full = $item['images']['standard_resolution']['url'];
+            $descricao = $item['caption']['text'];
+            
+          ?> 
+          <div>
+                <a href="<?php echo $full; ?>" class="flipLightBox">
+                <img src="<?php echo $thumb; ?>" alt="<?php echo $descricao; ?>" />
+                <span><p><?php echo $descricao; ?></p></span>
+                </a>
+              
+            </div>
+            
+          <?php
+	          }
